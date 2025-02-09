@@ -1,6 +1,6 @@
 # Cybersecurity Intrusion Detection with NSL-KDD
 
-## NON-TECHNICAL EXPLANATION OF YOUR PROJECT
+## NON-TECHNICAL EXPLANATION
 This project aims to enhance cybersecurity by developing an intelligent system that automatically detects network intrusions. By analyzing patterns in network traffic, the system identifies suspicious activities and potential cyberattacks. It leverages machine learning to learn from historical data, thereby improving its accuracy over time. The goal is to provide an effective early-warning mechanism that helps prevent unauthorized access and cyber threats. This approach is accessible to both technical experts and non-specialists, demonstrating how smart technologies can safeguard digital infrastructures in an increasingly connected world.
 
 ## DATA
