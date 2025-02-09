@@ -1,0 +1,23 @@
+# Cybersecurity Intrusion Detection with NSL-KDD
+
+## NON-TECHNICAL EXPLANATION OF YOUR PROJECT
+This project aims to enhance cybersecurity by developing an intelligent system that automatically detects network intrusions. By analyzing patterns in network traffic, the system identifies suspicious activities and potential cyberattacks. It leverages machine learning to learn from historical data, thereby improving its accuracy over time. The goal is to provide an effective early-warning mechanism that helps prevent unauthorized access and cyber threats. This approach is accessible to both technical experts and non-specialists, demonstrating how smart technologies can safeguard digital infrastructures in an increasingly connected world.
+
+## DATA
+The project uses the NSL-KDD dataset—a refined version of the widely known KDD Cup 99 dataset—comprising network traffic records labeled as normal or attack. The data includes both numerical and categorical features (such as protocol type, service, and flag) that describe each network connection. The dataset is publicly available and can be accessed via the [NSL-KDD GitHub Repository](https://github.com/defcom17/NSL_KDD).
+
+## MODEL
+A Random Forest classifier was selected for this project due to its robustness and ability to handle high-dimensional data effectively. Random Forest aggregates the decisions of multiple trees to reduce overfitting and improve generalization. This ensemble method is well-suited for tabular data and provides interpretable feature importance metrics. Additionally, the model’s predicted probabilities were calibrated and adjusted with an optimized decision threshold to enhance the detection of cyberattacks, ensuring that critical security threats are identified with high recall.
+
+## HYPERPARAMETER OPTIMSATION
+Hyperparameter tuning was performed using `RandomizedSearchCV`, which efficiently samples from a broad parameter grid. Key hyperparameters included:
+- **n_estimators:** Number of trees in the forest.
+- **max_depth:** Maximum depth of each tree.
+- **min_samples_split:** Minimum number of samples required to split an internal node.
+- **min_samples_leaf:** Minimum number of samples required at a leaf node.
+- **max_features:** Number of features to consider at each split.
+- **class_weight:** Adjustments for class imbalance.
+The optimization prioritized maximizing recall for the attack class, crucial for minimizing false negatives in cybersecurity applications.
+
+## RESULTS
+The optimized Random Forest model achieved an overall test accuracy of approximately 89%. After calibration and threshold adjustment, the model attained an attack recall of 90% and precision of 92%, indicating a strong ability to detect network intrusions while maintaining a low false-positive rate. These results underscore the effectiveness of machine learning techniques in enhancing cybersecurity measures. The project demonstrates how careful preprocessing, model selection, and hyperparameter tuning can collectively build a robust intrusion detection system, laying the foundation for future improvements and real-world deployment.
